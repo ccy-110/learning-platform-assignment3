@@ -159,3 +159,19 @@ Banner：
 2. 再附上以上全部提示词；
 3. 最后说明技术栈、已实现交互和本地启动命令。
 ```
+
+## 提示词 9：上传 GitHub 并配置 GitHub Pages
+
+```text
+请将当前项目上传到 GitHub 仓库 ccy-110/learning-platform-assignment3，并配置 GitHub Pages：
+1. 保持 main 分支为源码主分支；
+2. 为 GitHub Pages 生产构建设置 Vite base 为 /learning-platform-assignment3/；
+3. Vue Router 使用 import.meta.env.BASE_URL 作为 history 基础路径，保持应用内路由为 /assignment3；
+4. 头像等 public 资源通过 import.meta.env.BASE_URL 拼接，避免子路径下 404；
+5. 构建时复制 index.html 为 404.html，作为 GitHub Pages 的 SPA 刷新回退；
+6. 增加 build:pages 与 preview:pages 脚本；
+7. 添加 GitHub Actions 工作流，在推送到 main 时自动构建并发布到 gh-pages 分支；
+8. 将 GitHub Pages 的 Source 一次性设置为 Deploy from a branch → gh-pages → / (root)；
+9. 最终在线地址应为 https://ccy-110.github.io/learning-platform-assignment3/assignment3，
+   并验证首页重定向、静态资源、头像和 /assignment3 直接访问均正常。
+```

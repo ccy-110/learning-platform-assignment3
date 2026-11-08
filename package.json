@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "build:pages": "vite build --mode github-pages",
+    "preview": "vite preview --host 0.0.0.0",
+    "preview:pages": "vite preview --mode github-pages --host 0.0.0.0"
   },
   "dependencies": {
     "@element-plus/icons-vue": "2.3.2",

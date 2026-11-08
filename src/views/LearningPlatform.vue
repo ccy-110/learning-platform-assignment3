@@ -3,7 +3,7 @@ import { computed, reactive, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 
 const keyword = ref('')
-const avatarUrl = '/images/avatar.png'
+const avatarUrl = `${import.meta.env.BASE_URL}images/avatar.png`
 
 const banners = [
   {

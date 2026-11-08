@@ -20,6 +20,10 @@ npm run dev
 
 根路径 `/` 会自动重定向到 `/assignment3`。
 
+## 在线预览
+
+GitHub Pages：<https://ccy-110.github.io/learning-platform-assignment3/assignment3>
+
 ## 生产构建
 
 ```bash
@@ -29,6 +33,18 @@ npm run preview
 
 构建产物位于 `dist/`。项目使用 history 路由，部署到静态服务器时需要将未匹配的路径回退到
 `index.html`；已提供 Netlify 的 `public/_redirects` 与 Vercel 的 `vercel.json`。
+
+## GitHub Pages 部署
+
+仓库内置了 `.github/workflows/deploy-pages.yml`：推送到 `main` 后自动构建并发布到
+`gh-pages` 分支。GitHub Pages 的 Source 需一次性设置为：
+
+```text
+Deploy from a branch → gh-pages → / (root)
+```
+
+Pages 构建使用 `/learning-platform-assignment3/` 作为 Vite 基础路径，并生成
+`404.html` 作为 SPA 路由的刷新回退，因此直接打开 `/assignment3` 不会出现 404。
 
 ## 已实现内容
 
@@ -46,7 +62,9 @@ npm run preview
 learning-platform/
 ├─ public/
 │  ├─ images/avatar.png
+│  ├─ .nojekyll
 │  └─ _redirects
+├─ .github/workflows/deploy-pages.yml
 ├─ src/
 │  ├─ router/index.js
 │  ├─ styles/global.css
