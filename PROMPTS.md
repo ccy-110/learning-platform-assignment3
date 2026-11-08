@@ -168,7 +168,8 @@ Banner：
 2. 为 GitHub Pages 生产构建设置 Vite base 为 /learning-platform-assignment3/；
 3. Vue Router 使用 import.meta.env.BASE_URL 作为 history 基础路径，保持应用内路由为 /assignment3；
 4. 头像等 public 资源通过 import.meta.env.BASE_URL 拼接，避免子路径下 404；
-5. 构建时复制 index.html 为 404.html，作为 GitHub Pages 的 SPA 刷新回退；
+5. 构建时复制 index.html 到 assignment3/index.html，使直接访问 /assignment3 返回 HTTP 200，
+   并同时复制为 404.html 作为其他深链接的 SPA 刷新回退；
 6. 增加 build:pages 与 preview:pages 脚本；
 7. 添加 GitHub Actions 工作流，在推送到 main 时自动构建并发布到 gh-pages 分支；
 8. 将 GitHub Pages 的 Source 一次性设置为 Deploy from a branch → gh-pages → / (root)；

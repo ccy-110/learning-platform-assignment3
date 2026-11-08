@@ -43,8 +43,9 @@ npm run preview
 Deploy from a branch → gh-pages → / (root)
 ```
 
-Pages 构建使用 `/learning-platform-assignment3/` 作为 Vite 基础路径，并生成
-`404.html` 作为 SPA 路由的刷新回退，因此直接打开 `/assignment3` 不会出现 404。
+Pages 构建使用 `/learning-platform-assignment3/` 作为 Vite 基础路径，同时生成
+`assignment3/index.html` 使直接访问 `/assignment3` 返回 HTTP 200，并生成
+`404.html` 作为其他深链接的 SPA 刷新回退。
 
 ## 已实现内容
 
